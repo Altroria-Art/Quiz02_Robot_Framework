@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.11.3 on win32)" generated="2026-02-12T19:24:56.581925" rpa="false" schemaversion="5">
+<suite id="s1" name="testRF02" source="E:\Work\Year_2\Semister_2\SoftwareTesting\Quiz02_Robot_Framework\testRF02.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-02-12T19:24:56.800872" level="INFO">Opening browser 'chrome' to base url 'https://chiangmuan.igovapp.com'.</msg>
+<arg>https://chiangmuan.igovapp.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-12T19:24:56.800872" elapsed="9.960646"/>
+</kw>
+<test id="s1-t1" name="TestCase01" line="20">
+<kw name="Submit the request">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-12T19:25:06.763023" level="INFO">Clicking element '//*[@id="root"]/div/main/section[2]/div/a[1]/div'.</msg>
+<msg time="2026-02-12T19:25:07.173020" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-12T19:25:07.173020" level="FAIL">Element with locator '//*[@id="root"]/div/main/section[2]/div/a[1]/div' not found.</msg>
+<arg>//*[@id="root"]/div/main/section[2]/div/a[1]/div</arg>
+<arg>modifier=False</arg>
+<arg>action_chain=False</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-02-12T19:25:06.763023" elapsed="0.412003">Element with locator '//*[@id="root"]/div/main/section[2]/div/a[1]/div' not found.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//*[@id="root"]/div/main/section[2]/div/div[2]/div[2]/a</arg>
+<arg>modifier=False</arg>
+<arg>action_chain=False</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-12T19:25:07.175026" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-02-12T19:25:06.763023" elapsed="0.412003">Element with locator '//*[@id="root"]/div/main/section[2]/div/a[1]/div' not found.</status>
+</kw>
+<status status="FAIL" start="2026-02-12T19:25:06.761518" elapsed="0.413508">Element with locator '//*[@id="root"]/div/main/section[2]/div/a[1]/div' not found.</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-12T19:25:07.176026" elapsed="2.103164"/>
+</kw>
+<status status="FAIL" start="2026-02-12T19:24:56.583428" elapsed="12.695762"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="testRF02" id="s1" pass="0" fail="1" skip="0">testRF02</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

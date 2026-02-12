@@ -1,50 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.11.3 on win32)" generated="2026-02-12T19:24:56.581925" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.11.3 on win32)" generated="2026-02-12T21:05:17.692880" rpa="false" schemaversion="5">
 <suite id="s1" name="testRF02" source="E:\Work\Year_2\Semister_2\SoftwareTesting\Quiz02_Robot_Framework\testRF02.robot">
 <kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2026-02-12T19:24:56.800872" level="INFO">Opening browser 'chrome' to base url 'https://chiangmuan.igovapp.com'.</msg>
+<msg time="2026-02-12T21:05:17.850994" level="INFO">Opening browser 'chrome' to base url 'https://chiangmuan.igovapp.com'.</msg>
 <arg>https://chiangmuan.igovapp.com</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-12T19:24:56.800872" elapsed="9.960646"/>
+<status status="PASS" start="2026-02-12T21:05:17.850994" elapsed="1.733575"/>
 </kw>
-<test id="s1-t1" name="TestCase01" line="20">
-<kw name="Submit the request">
+<test id="s1-t1" name="TestCase01" line="35">
+<kw name="Login Line">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="root"]/div/nav/header/div/a[1]</arg>
+<arg>timeout=20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T21:05:19.585575" elapsed="0.014016"/>
+</kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-02-12T19:25:06.763023" level="INFO">Clicking element '//*[@id="root"]/div/main/section[2]/div/a[1]/div'.</msg>
-<msg time="2026-02-12T19:25:07.173020" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-02-12T19:25:07.173020" level="FAIL">Element with locator '//*[@id="root"]/div/main/section[2]/div/a[1]/div' not found.</msg>
+<msg time="2026-02-12T21:05:19.599591" level="INFO">Clicking element '//*[@id="root"]/div/nav/header/div/a[1]'.</msg>
+<arg>//*[@id="root"]/div/nav/header/div/a[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T21:05:19.599591" elapsed="1.482248"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="app"]/div/div/div/div[2]/div/form/fieldset/div[1]/input</arg>
+<arg>timeout=20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T21:05:21.082838" elapsed="0.428914"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-12T21:05:21.511752" level="INFO">Typing text 'gamesaaa001@gmail.com' into text field '//*[@id="app"]/div/div/div/div[2]/div/form/fieldset/div[1]/input'.</msg>
+<arg>//*[@id="app"]/div/div/div/div[2]/div/form/fieldset/div[1]/input</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T21:05:21.511752" elapsed="0.063806"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-12T21:05:21.575558" level="INFO">Typing text '0898563044za' into text field '//*[@id="app"]/div/div/div/div[2]/div/form/fieldset/div[2]/input'.</msg>
+<arg>//*[@id="app"]/div/div/div/div[2]/div/form/fieldset/div[2]/input</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T21:05:21.575558" elapsed="0.056071"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-12T21:05:21.631629" level="INFO">Clicking element '//*[@id="app"]/div/div/div/div[2]/div/form/fieldset/div[3]/button'.</msg>
+<arg>//*[@id="app"]/div/div/div/div[2]/div/form/fieldset/div[3]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T21:05:21.631629" elapsed="0.033157"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="root"]/div/main/section[2]/div/a[3]/div</arg>
+<arg>timeout=120</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T21:05:21.664786" elapsed="12.221391"/>
+</kw>
+<status status="PASS" start="2026-02-12T21:05:19.584569" elapsed="14.301608"/>
+</kw>
+<kw name="Comment Blood test record">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//*[@id="root"]/div/main/section[2]/div/a[1]/div</arg>
-<arg>modifier=False</arg>
-<arg>action_chain=False</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2026-02-12T19:25:06.763023" elapsed="0.412003">Element with locator '//*[@id="root"]/div/main/section[2]/div/a[1]/div' not found.</status>
+<arg>timeout=20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T21:05:33.887178" elapsed="0.020549"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<arg>//*[@id="root"]/div/main/section[2]/div/div[2]/div[2]/a</arg>
+<msg time="2026-02-12T21:05:33.907727" level="INFO">Clicking element '//*[@id="root"]/div/main/section[2]/div/a[1]/div'.</msg>
+<arg>//*[@id="root"]/div/main/section[2]/div/a[1]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T21:05:33.907727" elapsed="0.070096"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="root"]/div/main/section[2]/div/div[2]/div[3]/a</arg>
+<arg>timeout=20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T21:05:33.977823" elapsed="0.010081"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-12T21:05:33.987904" level="INFO">Clicking element '//*[@id="root"]/div/main/section[2]/div/div[2]/div[3]/a'.</msg>
+<arg>//*[@id="root"]/div/main/section[2]/div/div[2]/div[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T21:05:33.987904" elapsed="0.228175"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(@href, '1639800361815-00188')]</arg>
+<arg>timeout=20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T21:05:34.216079" elapsed="0.237071"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-12T21:05:34.453150" level="INFO">Clicking element 'xpath=//a[contains(@href, '1639800361815-00188')]'.</msg>
+<arg>xpath=//a[contains(@href, '1639800361815-00188')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T21:05:34.453150" elapsed="0.065438"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<arg>timeout=15s</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2026-02-12T21:05:34.518588" elapsed="0.008166"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="page-Physical Examination Request"]/div[2]/div[2]/div/div[3]/div[1]/div[3]/div/div/div[1]/div/div[2]/div/div/div[1]/p</arg>
+<arg>timeout=20</arg>
+<arg>error=None</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T21:05:34.526754" elapsed="1.824212"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-12T21:05:36.350966" level="INFO">Typing text 'สุขภาพดี' into text field '//*[@id="page-Physical Examination Request"]/div[2]/div[2]/div/div[3]/div[1]/div[3]/div/div/div[1]/div/div[2]/div/div/div[1]/p'.</msg>
+<arg>//*[@id="page-Physical Examination Request"]/div[2]/div[2]/div/div[3]/div[1]/div[3]/div/div/div[1]/div/div[2]/div/div/div[1]/p</arg>
+<arg>${TexttestBlood}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-12T21:05:36.350966" elapsed="0.080689"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="page-Physical Examination Request"]/div[2]/div[2]/div/div[3]/div[1]/div[3]/div/div/div[1]/div/button</arg>
+<arg>timeout=20</arg>
+<arg>error=None</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-12T21:05:36.432656" elapsed="0.446064"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-12T21:05:36.879720" level="INFO">Clicking element '//*[@id="page-Physical Examination Request"]/div[2]/div[2]/div/div[3]/div[1]/div[3]/div/div/div[1]/div/button'.</msg>
+<arg>//*[@id="page-Physical Examination Request"]/div[2]/div[2]/div/div[3]/div[1]/div[3]/div/div/div[1]/div/button</arg>
 <arg>modifier=False</arg>
 <arg>action_chain=False</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-02-12T19:25:07.175026" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-12T21:05:36.879720" elapsed="0.062895"/>
 </kw>
-<status status="FAIL" start="2026-02-12T19:25:06.763023" elapsed="0.412003">Element with locator '//*[@id="root"]/div/main/section[2]/div/a[1]/div' not found.</status>
+<status status="PASS" start="2026-02-12T21:05:33.887178" elapsed="3.055437"/>
 </kw>
-<status status="FAIL" start="2026-02-12T19:25:06.761518" elapsed="0.413508">Element with locator '//*[@id="root"]/div/main/section[2]/div/a[1]/div' not found.</status>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-12T21:05:41.944101" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-12T21:05:36.942615" elapsed="5.001486"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-12T21:05:41.989691" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-12T21:05:41.944101" elapsed="0.045590"/>
+</kw>
+<status status="PASS" start="2026-02-12T21:05:19.584569" elapsed="22.406122"/>
 </test>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-02-12T19:25:07.176026" elapsed="2.103164"/>
+<status status="PASS" start="2026-02-12T21:05:41.990691" elapsed="2.112035"/>
 </kw>
-<status status="FAIL" start="2026-02-12T19:24:56.583428" elapsed="12.695762"/>
+<status status="PASS" start="2026-02-12T21:05:17.692880" elapsed="26.409846"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="testRF02" id="s1" pass="0" fail="1" skip="0">testRF02</stat>
+<stat name="testRF02" id="s1" pass="1" fail="0" skip="0">testRF02</stat>
 </suite>
 </statistics>
 <errors>
